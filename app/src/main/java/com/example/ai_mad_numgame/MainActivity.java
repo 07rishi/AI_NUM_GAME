@@ -90,30 +90,7 @@ public class MainActivity extends AppCompatActivity {
             correct_ans=operand1*operand2;
 
 
-        if(correctButton==0){
-            button1.setText(correct_ans+"");
-            button2.setText(correct_ans+1+"");
-            button3.setText(correct_ans-1+"");
-            button4.setText(correct_ans+2+"");
-        }
-        else if(correctButton==1){
-            button1.setText(correct_ans+1+"");
-            button2.setText(correct_ans+"");
-            button3.setText(correct_ans-1+"");
-            button4.setText(correct_ans+2+"");
-        }
-        else if(correctButton==2){
-            button1.setText(correct_ans+1+"");
-            button2.setText(correct_ans-1+"");
-            button3.setText(correct_ans+"");
-            button4.setText(correct_ans+2+"");
-        }
-        else{
-            button1.setText(correct_ans+1+"");
-            button2.setText(correct_ans-1+"");
-            button3.setText(correct_ans+2+"");
-            button4.setText(correct_ans+"");
-        }
+        
         if(matchCounter==3){    // if three matches are completed updatee the perfomrance in sharedpreferences
 
             matchCounter=0;
