@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundhomepagexml"
+    android:background="@drawable/quiz"
     tools:context=".MainActivity">
 
 
@@ -15,7 +15,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="60dp"
         android:text="Answer this"
-        android:textColor="@color/black"
+        android:textColor="@color/ealt"
         android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
@@ -60,7 +60,7 @@
             android:layout_height="150dp"
             android:layout_margin="10dp"
             android:layout_marginRight="10dp"
-            android:background="@color/teal_700"
+            android:background="@color/purple"
             android:onClick="load"
             android:tag="0"
             android:textSize="50sp"
@@ -74,7 +74,7 @@
             android:onClick="load"
             android:layout_margin="10dp"
             android:tag="1"
-            android:background="@color/teal_700"
+            android:background="@color/blue"
             android:textSize="50sp"
             app:layout_column="1"
             app:layout_row="0" />
