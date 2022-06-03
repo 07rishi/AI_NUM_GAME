@@ -69,7 +69,51 @@ public class MainActivity extends AppCompatActivity {
                 }).show();
     }
 
-    
+    public void newMatch() {  //A game is composed of three matches
+
+        int operand1 = random.nextInt(10);
+        int operand2=random.nextInt(10);
+        int correctButton= random.nextInt(4);
+        //check is operand2 is not zero; otherwise in case of division-divide by zero error will come
+        String operator = operators[random.nextInt(4)];
+        textView2.setText(operand1 + operator + operand2);
+
+      // Your code here, to diplay correct and incorrect options on the buttons
+        int correct_ans=-100;
+        if(operator.equals("+"))
+            correct_ans=operand1+operand2;
+        else if(operator.equals("-"))
+            correct_ans=operand1-operand2;
+        else if(operator.equals("/"))
+            correct_ans=operand1/operand2;
+        else
+            correct_ans=operand1*operand2;
+
+
+        if(correctButton==0){
+            button1.setText(correct_ans+"");
+            button2.setText(correct_ans+1+"");
+            button3.setText(correct_ans-1+"");
+            button4.setText(correct_ans+2+"");
+        }
+        else if(correctButton==1){
+            button1.setText(correct_ans+1+"");
+            button2.setText(correct_ans+"");
+            button3.setText(correct_ans-1+"");
+            button4.setText(correct_ans+2+"");
+        }
+        else if(correctButton==2){
+            button1.setText(correct_ans+1+"");
+            button2.setText(correct_ans-1+"");
+            button3.setText(correct_ans+"");
+            button4.setText(correct_ans+2+"");
+        }
+        else{
+            button1.setText(correct_ans+1+"");
+            button2.setText(correct_ans-1+"");
+            button3.setText(correct_ans+2+"");
+            button4.setText(correct_ans+"");
+        }
 
 
         
@@ -86,7 +130,14 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    
+    public int sumOfScore(){
+        //Computing the sum of score array, which has the 1 or in each index,depending on correct or incorrect answers
+        int sum=0;
+       // your code here
+        for(int i=0;i<score.length;i++)
+            sum=sum+score[i];
+        return sum;
+    }
 
     public int[][] dataPrep() {
         int[] data = new Gson().fromJson((sharedPreferences.getString("data", null)), performance.getClass());
