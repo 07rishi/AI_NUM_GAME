@@ -27,4 +27,7 @@ be performance values. The getSlope method is a static method, so you won't need
 <li><b>dataPrep</b> method generates a data-frame AKA two-dimensional array to be passed to the getSlope method.</li>
 
 <li><b>getInterpretation</b> method returns a string based on the analysis of slope obtained from analysis of past six performances.</li>
+  <li>The performance array will be stored in a SharedPreferences object. The SharedPreferences object is fetched at the start of the activity and an
+    alert dialog is presetned to the user suggesting on his or her performance based on the last six games. </li>
+
 </ul>
